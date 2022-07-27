@@ -1,7 +1,10 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const app=express();
 const dotenv = require('dotenv');
+const mongoose = require('mongoose');
+
+const authRoute = require('./routes/auth');
+
 //Route imports
 
 dotenv.config();
@@ -9,8 +12,6 @@ dotenv.config();
 //mongo connect
 mongoose.connect(process.env.MONGO_URL,{useNewUrlParser:true},()=>{console.log("Mongo Connection Success");});
 
-
-const authRoute = require('./routes/auth');
 
 
 //global middlewares
