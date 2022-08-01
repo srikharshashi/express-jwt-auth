@@ -1,0 +1,2 @@
+@hapi/joi --> is used for validation 
+bcryptjs --> used for password hashing
